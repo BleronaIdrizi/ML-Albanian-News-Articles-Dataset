@@ -36,7 +36,3 @@ pip3 install -r requirements.txt
 
 
 ### 2. Priprocesimi i të dhënave: 
-#### 2.1 Reduktimi i dimensionalitetit: 
-- Në dataset-in tonë janë përdorur dy kolona për të treguar nëse artikulli ka pasur zbritje dhe nese është përdorur kodi i zbritjës. Përdorimi i njerës afekton tjetrën, kështu që e kemi shtuar një kolonë të re që i përfaqson këto dy kolona, dhe rezultati i dataset-it duket kështu:
-
-![Dimensinality Reduction](images/dimensinality_reduction.png)
