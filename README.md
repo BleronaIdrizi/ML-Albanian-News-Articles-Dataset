@@ -35,6 +35,14 @@ Ju lutemi referojuni dokumentacionit të datasetit në Kaggle për detaje të m�
 
 ## Teknologjitë e përdorura
 Gjuha kryesore e programimit për zhvillimin e modelit është python ku libraritë e përdorura gjenden ne fajllin requirements.txt në mënyrë që me atë fajll mund të instalohen libraritë e nevojshme për këtë projekt.
+Disa nga algoritmet e klasifikimit qe pretendojm ti perdorim që të gjejmë se cili na pershtatet dhe na rezulton me rezultate me të mira janë:
+```python
+1. Logistic Regression
+2. Decision Tree
+3. Random Forest
+4. Naive Bayes
+5. K-Nearest Neighbors (KNN)
+```
 
 ## Startimi i projektit
 1. Se pari bëni instalimin e python-it në pajisjen e juaj.
