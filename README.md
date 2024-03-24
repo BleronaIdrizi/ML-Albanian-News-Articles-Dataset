@@ -112,6 +112,18 @@ Përmes histogramit mund të shihet se cilat kategori janë më të përhapurat 
 
 ![alt text](./images/skewed_categories.png)
 
+#### 6. *Detektimi dhe trajtimi i vlerave të jashtme (Outliers)*
+Për identifikimin e outliers, ne kemi implementuar algoritmin KMeans. Pas zbatimit të KMeans, grupi që përmbante numrin më të vogël të rasteve u konsiderua si përmbajtja e vlerave të jashtme. Heqja e outliers mund të kontribuojë në përmirësimin e performancës së modelit duke ulur ndikimin e zhurmës dhe duke mundësuar një përshkrim më të saktë të tendencave në të dhëna. Kjo u verifikua nëpërmjet krahasimit të performancës së modelit para dhe pas trajtimit të vlerave të jashtme.
+
+- Ne gjetëm se pas heqjes së vlerave të jashtme, modeli ynë tregoi një përmirësim në saktësi, që sugjeron se këto raste të rralla po e shtrembëronin mësimin e modelit. Numri specifik i anomalive të detektuara dhe ndikimi i tyre në model janë të dokumentuara në raportet e analizës.
+
+![alt text](./images/outliers.png)
+
+#### 6. *Mostrimi*
+Paraqitja e outliers me mostrim:
+
+![alt text](./images/outliers_2.png)
+
 ## Kontributi
 Blerona Idrizi
 
