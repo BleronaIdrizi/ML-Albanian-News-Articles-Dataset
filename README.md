@@ -1,10 +1,14 @@
-# Parashikimi i Kategorisë së Artikujve të Lajmeve në Gjuhën Shqipe
+# Parashikimi i kategorisë së artikujve të lajmeve në gjuhën shqipe
 
-Ky projekt synon të zhvillojë një model të mësimit të makinës për të parashikuar kategorinë e një artikulli të lajmit në gjuhën shqipe. Për këtë qëllim, do të përdorim datasetin e artikujve të lajmeve të Kosovës të disponueshëm në **[Albanian News Articles Dataset](https://www.kaggle.com/datasets/gentrexha/kosovo-news-articles-dataset)**.
+## Informacione mbi projektin
 
+Ky projekt është zhvilluar si pjesë e programit akademik në Universitetin e Prishtinës "Hasan Prishtina", Fakullteti i Inxhinieris elektrike dhe kompjuterike, në kuadër të nivelit të studimeve Master. Projekti është përgatitur për lëndën Machine Learning, e udhëhequr nga profesorët Lule Ahmedi dhe asistentit Mërgim Hoti.
 
-Qëllimi kryesor i këtij projekti është të ndërtojmë një model të mësimit të makinës që mund të parashikojë kategorinë e një artikulli të lajmit me bazë tekstin e artikullit. Kategoritë e mundshme të artikujve përfshijnë Shëndeti, Sport, Politikë, etj. Kjo mund të përdoret për të klasifikuar automatikisht artikujt e lajmeve në faqet e internetit, për të ndihmuar në organizimin e tyre dhe për të ofruar përmbajtje relevante për audiencën.
+## Përshkrimi i Projektit
 
+Qëllimi i këtij projekti është të zhvillohet një model i mësimit të makinës që mund të parashikojë me saktësi kategorinë e artikujve të lajmeve në gjuhën shqipe. Për të arritur këtë qëllim, është përdorur dataseti i artikujve të lajmeve nga Kosova, i disponueshëm në **[Albanian News Articles Dataset](https://www.kaggle.com/datasets/gentrexha/kosovo-news-articles-dataset)** në platformën Kaggle.
+
+Modeli synon të klasifikojë artikujt në kategori të ndryshme si Shëndeti, Sporti, Politika, etj., duke përdorur përmbajtjen tekstuale të artikullit. Kjo do të mundësojë klasifikimin automatik të artikujve të lajmeve në portale të ndryshme informative, duke ndihmuar në organizimin më efikas të tyre dhe ofrimin e përmbajtjeve më relevante për lexuesit.
 
 ## Startimi i projektit
 1. Se pari bëni instalimin e python-it në pajisjen e juaj.
@@ -16,23 +20,26 @@ pip3 install -r requirements.txt
 
 ## Tipet e atributeve
 1. Kategoriale(Kualitative)
-    - Nominale: Kategoria, Titulli, Autori, Përmbajtja, Burimi i artikullit
+    - Nominale: 'content', 'title', 'category', 'author', 'source'
 2. Numerike(Kuantitative)
-    - Interval: Data e publikimit.
-
-
-    ## Disa rezultate tona në priprocesimin e të dhënave
+    - Interval: 'date'
+## Faza I:  Përgatitja e modelit
 ### 1. *Kualiteti i të dhënave*: 
 #### 1.1 *Menaxhimi vlerave *null**: 
 - Në dataset-in tonë janë gjetur disa lloje të ndryshme të kolonave me vlera *null*.
 
-![alt text](image.png)
+![alt text](./images/image.png)
 - Vlerat *null* të kolonave "date, category & author" i kemi injoruar.
 
 #### 1.2 *Menaxhimi i duplikateve*: 
 - Në dataset-in tonë i janë gjetur 613866 duplikate.
 - Pas ekzektuimi të komandës për gjetjen e rreshtave duplikat e kemi ekzekutuar komandën për largimin e duplikateve.
-![alt text](image-1.png)
+![alt text](./images/image-1.png)
 
 
 ### 2. Priprocesimi i të dhënave: 
+
+## Kontributi
+Blerona Idrizi
+
+Ariana Gashi
