@@ -1,14 +1,40 @@
 # Parashikimi i kategorisë së artikujve të lajmeve në gjuhën shqipe
 
-## Informacione mbi projektin
-
-Ky projekt është zhvilluar si pjesë e programit akademik në Universitetin e Prishtinës "Hasan Prishtina", Fakullteti i Inxhinieris elektrike dhe kompjuterike, në kuadër të nivelit të studimeve Master. Projekti është përgatitur për lëndën Machine Learning, e udhëhequr nga profesorët Lule Ahmedi dhe asistentit Mërgim Hoti.
-
-## Përshkrimi i Projektit
+Ky projekt është zhvilluar si pjesë e programit akademik në Universitetin e Prishtinës "Hasan Prishtina", Fakullteti i Inxhinieris Elektrike dhe Kompjuterike, në kuadër të nivelit të studimeve Master. Projekti është përgatitur për lëndën Machine Learning, e udhëhequr nga profesoresha Lule Ahmedi dhe asistenti Mërgim Hoti.
 
 Qëllimi i këtij projekti është të zhvillohet një model i mësimit të makinës që mund të parashikojë me saktësi kategorinë e artikujve të lajmeve në gjuhën shqipe. Për të arritur këtë qëllim, është përdorur dataseti i artikujve të lajmeve nga Kosova, i disponueshëm në **[Albanian News Articles Dataset](https://www.kaggle.com/datasets/gentrexha/kosovo-news-articles-dataset)** në platformën Kaggle.
 
 Modeli synon të klasifikojë artikujt në kategori të ndryshme si Shëndeti, Sporti, Politika, etj., duke përdorur përmbajtjen tekstuale të artikullit. Kjo do të mundësojë klasifikimin automatik të artikujve të lajmeve në portale të ndryshme informative, duke ndihmuar në organizimin më efikas të tyre dhe ofrimin e përmbajtjeve më relevante për lexuesit.
+
+## Detajet e Datasetit
+
+Dataseti i përdorur në këtë projekt përmban artikuj të lajmeve nga Kosova, të cilët janë të shkruar në gjuhën shqipe. Ky dataset është i disponueshëm në platformën Kaggle dhe mund të aksesohet përmes linkut të mëposhtëm:
+
+[Albanian News Articles Dataset](https://www.kaggle.com/datasets/gentrexha/kosovo-news-articles-dataset)
+
+Karakteristikat kryesore të datasetit përfshijnë:
+- **Kolonat e dataset-it:** Dataseti përmban këto kolona: 'content', 'date', 'title', 'category', 'author', 'source'.
+- **Numri i Atributeve:** Dataseti ynë përbëhet nga 6 kolona dhe më shumë se 3 milion rreshta.
+- **Madhësia e Datasetit:** Dataseti ka një madhësi prej 3.85 GB.
+- **Tipet e atributeve:**
+    1. Kategoriale(Kualitative)
+        - Nominale: 'content', 'title', 'category', 'author', 'source'
+    2. Numerike(Kuantitative)
+        - Interval: 'date'
+- **Burimi:** Dataseti është krijuar dhe mbledhur nga Gent Rexha dhe është publikuar në Kaggle për përdorim në projekte të ndryshme të mësimit të makinës.
+
+Ju lutemi referojuni dokumentacionit të datasetit në Kaggle për detaje të mëtejshme dhe udhëzime rreth përdorimit të tij.
+
+## Struktura e projektit
+- `data-preparation-and-visualization/main.ipynb`: Skriptë e python për ekzekutimin e komandave të dëshiruara.
+- `utils.py`: Skriptë që përmban funksione ndihmëse të përdorura në skriptat e tjera.
+- `files/`: Direktoria ku ruhen fajllat e dataseteve të përdorura në projekt.
+- `images/`: Direktoria ku ruhen imazhet e përdorura në projekt.
+- `requirements.txt`: Direktoria ku ruhen libraritë e përdorura.
+- `README.md`: Ky dokument, i cili përmban informacionet bazë të projektit.
+
+## Teknologjitë e përdorura
+Gjuha kryesore e programimit për zhvillimin e modelit është python ku libraritë e përdorura gjenden ne fajllin requirements.txt në mënyrë që me atë fajll mund të instalohen libraritë e nevojshme për këtë projekt.
 
 ## Startimi i projektit
 1. Se pari bëni instalimin e python-it në pajisjen e juaj.
@@ -18,11 +44,6 @@ Modeli synon të klasifikojë artikujt në kategori të ndryshme si Shëndeti, S
 pip3 install -r requirements.txt
 ```
 
-## Tipet e atributeve
-1. Kategoriale(Kualitative)
-    - Nominale: 'content', 'title', 'category', 'author', 'source'
-2. Numerike(Kuantitative)
-    - Interval: 'date'
 ## Faza I:  Përgatitja e modelit
 #### 1. *Menaxhimi vlerave *null**: 
 - Në dataset-in tonë janë gjetur disa lloje të ndryshme të kolonave me vlera *null*.
