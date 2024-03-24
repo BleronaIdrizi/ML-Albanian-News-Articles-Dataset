@@ -106,6 +106,11 @@ Paraqitja e një shembulli të agregimit - grumbullimi i të dhënave category s
 
 ![alt text](./images/aggregation.png)
 
+#### 5. *Të dhënat e shtrembura*
+Për paraqitja e një shembulli të të dhëave të shtrembura për kolonën **'category'** ne kemi numëruar kategoritë unike dhe kemi llogaritur totalin e artikujve që e posedojnë atë kategori. Identifikimi i klasëve të shtrembura është bërë përmes kriterit të fjalëve që kanë numër më të madh të paraqitjeve krahasuar me mesataren e përgjithshme dhe devijimin standard. 
+Përmes histogramit mund të shihet se cilat kategori janë më të përhapurat në të dhënat tona.
+
+![alt text](./images/skewed_categories.png)
 
 ## Kontributi
 Blerona Idrizi
