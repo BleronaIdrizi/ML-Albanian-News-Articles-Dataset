@@ -6,7 +6,7 @@ Qëllimi i këtij projekti është të zhvillohet një model i mësimit të maki
 
 Modeli synon të klasifikojë artikujt në kategori të ndryshme si Shëndeti, Sporti, Politika, etj., duke përdorur përmbajtjen tekstuale të artikullit. Kjo do të mundësojë klasifikimin automatik të artikujve të lajmeve në portale të ndryshme informative, duke ndihmuar në organizimin më efikas të tyre dhe ofrimin e përmbajtjeve më relevante për lexuesit.
 
-## Detajet e Datasetit
+## Detajet e datasetit
 
 Dataseti i përdorur në këtë projekt përmban artikuj të lajmeve nga Kosova, të cilët janë të shkruar në gjuhën shqipe. Ky dataset është i disponueshëm në platformën Kaggle dhe mund të aksesohet përmes linkut të mëposhtëm:
 
@@ -14,8 +14,8 @@ Dataseti i përdorur në këtë projekt përmban artikuj të lajmeve nga Kosova,
 
 Karakteristikat kryesore të datasetit përfshijnë:
 - **Kolonat e dataset-it:** Dataseti përmban këto kolona: 'content', 'date', 'title', 'category', 'author', 'source'.
-- **Numri i Atributeve:** Dataseti ynë përbëhet nga 6 kolona dhe më shumë se 3 milion rreshta.
-- **Madhësia e Datasetit:** Dataseti ka një madhësi prej 3.85 GB.
+- **Numri i atributeve:** Dataseti ynë përbëhet nga 6 kolona dhe më shumë se 3 milion rreshta.
+- **Madhësia e datasetit:** Dataseti ka një madhësi prej 3.85 GB.
 - **Tipet e atributeve:**
     1. Kategoriale(Kualitative)
         - Nominale: 'content', 'title', 'category', 'author', 'source'
