@@ -24,20 +24,59 @@ pip3 install -r requirements.txt
 2. Numerike(Kuantitative)
     - Interval: 'date'
 ## Faza I:  Përgatitja e modelit
-### 1. *Kualiteti i të dhënave*: 
-#### 1.1 *Menaxhimi vlerave *null**: 
+#### 1. *Menaxhimi vlerave *null**: 
 - Në dataset-in tonë janë gjetur disa lloje të ndryshme të kolonave me vlera *null*.
 
-![alt text](./images/image.png)
+![alt text](./images/null.png)
+
 - Vlerat *null* të kolonave "date, category & author" i kemi injoruar.
 
-#### 1.2 *Menaxhimi i duplikateve*: 
+#### 2. *Menaxhimi i duplikateve*: 
 - Në dataset-in tonë i janë gjetur 613866 duplikate.
 - Pas ekzektuimi të komandës për gjetjen e rreshtave duplikat e kemi ekzekutuar komandën për largimin e duplikateve.
-![alt text](./images/image-1.png)
 
+![alt text](./images/duplicates.png)
 
-### 2. Priprocesimi i të dhënave: 
+#### 3. *Menaxhimi i NaN vlerave*: 
+Në dataset-in tonë janë gjendur vlera NaN në kolonat e ndryshme dhe i kemi fshire ato.
+- Para:
+
+![alt text](./images/nan_before.png)
+- Pas:
+
+![alt text](./images/nan_after.png)
+
+#### 3. *Largimi i kolonave*: 
+Në dataset-in tonë janë larguar kolonat: 'date' dhe 'author', për shkak se nuk janë të nevojshme në parashikimin e kategorisë, bazuar në kontent.
+
+#### 3. *Menagjimi i Outliers-ave*: 
+Paraqitja e Outliers ne baze te kolonës category:
+
+![alt text](./images/outliers_1.png)
+
+Pas këtij grafikoni shohim se kategoritë nuk janë të ndara në rregull dhe kemi filluar analizimin e tyre. Ne kemi mbledhur të gjitha kategoritë dhe i kemi ruajtu në fajllin all_categories.txt për ti analizuar ato. Në fajll shohim se në kolonë kategori ka mungesë të saktësis së të dhënave:
+
+![alt text](./images/all_categories.png)
+
+Më pas i kemi larguar të gjitha kategoritë të cilat nuk janë përdorur saktë, dhe nga 2593450 rreshta të datasetit pas pastrimit është fituar ky rezultat:
+![alt text](./images/rm_categories.png)
+
+Pastrimi i datasetit duket si më poshtë: 
+
+![alt text](./images/categories_before.png)
+
+- *Në këtë rast shohim kolonën category të pastruar me vlerat që përdoren më shumë se 5 here në dataset.*.
+
+#### 4. *Krijimi i nënbashkësive*: 
+Shembulli i një nënbashkësie të të dhënave te kolonave: 'title', 'content', 'category'
+
+![alt text](./images/nenbashksit.png)
+
+#### 5. *Agregimi*: 
+Paraqitja e një shembulli të agregimit - grumbullimi i të dhënave category se sa janë përdorur.
+
+![alt text](./images/aggregation.png)
+
 
 ## Kontributi
 Blerona Idrizi
