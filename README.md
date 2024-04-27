@@ -26,8 +26,7 @@ Karakteristikat kryesore të datasetit përfshijnë:
 Ju lutemi referojuni dokumentacionit të datasetit në Kaggle për detaje të mëtejshme dhe udhëzime rreth përdorimit të tij.
 
 ## Struktura e projektit
-- `data-preparation-and-visualization/main.ipynb`: Skriptë e python për ekzekutimin e komandave të dëshiruara.
-- `utils.py`: Skriptë që përmban funksione ndihmëse të përdorura në skriptat e tjera.
+- `data-preparation-and-visualization/main.ipynb`: Skriptë e python që paraqet fazën e parë të detyrës - .
 - `files/`: Direktoria ku ruhen fajllat e dataseteve të përdorura në projekt.
 - `images/`: Direktoria ku ruhen imazhet e përdorura në projekt.
 - `requirements.txt`: Direktoria ku ruhen libraritë e përdorura.
