@@ -51,7 +51,7 @@ Disa nga algoritmet e klasifikimit qe pretendojm ti perdorim që të gjejmë se 
 pip3 install -r requirements.txt
 ```
 
-## Faza I:  Përgatitja e modelit
+## Përgatitja e modelit
 #### 1. *Menaxhimi vlerave *null**: 
 - Në dataset-in tonë janë gjetur disa lloje të ndryshme të kolonave me vlera *null*.
 
@@ -122,6 +122,45 @@ Për identifikimin e outliers, ne kemi implementuar algoritmin KMeans. Pas zbati
 Paraqitja e outliers me mostrim:
 
 ![alt text](./images/outliers_2.png)
+
+## Faza II: Trajnimi i modelit
+
+#### 1. *Riprocesimi i dataset-it*
+ - Kontrollimi i kategorive
+
+Së pari i kemi shikur edhe njëherë se sa kategori janë përdorur në dataset-in tonë.
+
+![alt text](./images/f2_categories_before.png)
+
+##### Eleminimi i kategorive
+
+Sic shihet në figurën e mësiperme dhe poashtu pasi që në SMOTE kemi pasur vlera të njëanshme ne kemi vendosur ti heqim kategoritë të cilat janë përdorur më pak dhe që perdorën në dataset-in tonë me një numer të vogel vlerash. Në figurën e mëposhtme kemi detaje më të hollësishme në lidhje me kategoritë e eleminuara.
+
+![alt text](./images/f1_remove_categories.png)
+
+##### Kontrollimi i kategorive pas heqjes së disa kategorive
+
+Ne i kemi kontrolluar përseri numrin e përgjithshëm të kategorive që janë përdorur:
+
+![alt text](./images/f2_sec_categories_check.png)
+
+Ne kemi pare se në kolonën category ente kane mbetur disa kategori si dy kategori të ndara me ";", kështu që kemi vendosur ti bëjmë këto zevendësime:
+
+![alt text](./images/categgory_replacement.png)
+
+##### Kategoritë pas eleminimit
+
+Pasi që i kemi eleminuar disa kategori dhe kemi maipuluar me to, numri i kolonace në bazë të kategorive duket kështu:
+
+![alt text](./images/category_riprocessing.png)
+
+#### Ndarja e train/test dataset-it
+
+Kjo pjesë paraqet përpunimin e të dhënat tekstuale për përdorim në modele të klasifikimit të tekstit. Ne kemi kombinuar kolonat: content dhe title në një kolonë të vetme, që kodon kategoritë në forma numerike, dhe ndan të dhënat në grupe trajnimi dhe testim për të vlerësuar performancën e modelit.
+
+![alt text](./images/trainSplitDF.png)
+
+
 
 ## Kontributi
 Blerona Idrizi
