@@ -154,13 +154,52 @@ Pasi që i kemi eleminuar disa kategori dhe kemi maipuluar me to, numri i kolona
 
 ![alt text](./images/category_riprocessing.png)
 
-#### Ndarja e train/test dataset-it
+##### Rikontrollimi i kategorive
+
+Sipas rezultateve të fundit ne shohim se kategoritë e përdorura me pak se 100k rreshta janë vlera të vogla përkunder vlearve të përdorura si Lajme apo Kosovë dhe kështu qe ne i kemi reduktuar ato dhe rezultati final i kategorive pas riprocesimit duket kështu:
+
+![alt text](./images/category_final_reduce.png)
+
+#### 2. *Reduktimi i të dhënave*
+Pas riprocesimit ende kemi shumë vlera në kategori dhe ekzekutimi i kodit për algoritme merr me orë të tëra, kështu qe ne kemi vendosur ti marrim vetem 1/4 e datasetit dhe ta ruajmë në fajllin: Reduced_Preprocessed_Kosovo_News_Articles_Dataset.csv
+
+![alt text](./images/dataset_reduce.png)
+
+#### 2. *Confusion Matrix*
+Para fillimit të ekzekutimit të algoritme kemi dashur ti shohim raportin e klasifikimit të datasetit tonë me Confusion Matrix. Në figurën e mëposhtme shfaqet confusion matrix e total datasetit:
+
+![alt text](./images/confusion_matrix_all.png)
+
+Pasi që kuptimi i confusion matrix është shumë më i vështirë për komplet datasetin, ne i kemi shfaqur vlerat e confusion matrix për secilën tip të kategorive. Një shembull duket kështu:
+
+![alt text](./images/confusion_matrix_example.png)
+
+Raporti i klasisfikimit para ekzekutimit të algoritmeve ka këto vlera: 
+
+![alt text](./images/confusion_matrix_report.png)
+
+#### 3. *Ndarja e train/test dataset-it*
 
 Kjo pjesë paraqet përpunimin e të dhënat tekstuale për përdorim në modele të klasifikimit të tekstit. Ne kemi kombinuar kolonat: content dhe title në një kolonë të vetme, që kodon kategoritë në forma numerike, dhe ndan të dhënat në grupe trajnimi dhe testim për të vlerësuar performancën e modelit.
 
 ![alt text](./images/trainSplitDF.png)
 
+#### 4. *Algoritmet e aplikuara*
 
+Ne kemi vendosu që ti ekzekutojmë këto algoritme:
+
+##### 4.1 *BERT (Bidirectional Encoder Representations from Transformers)*
+BERT është një model i avancuar për procesimin e gjuhës natyrore (NLP) i krijuar nga Google i cili është i ndërtuar mbi arkitekturën e 'Transformers'. 
+ - Ne kemi zgjedhur të përdorim BERT për shkak të aftësisë së tij për të kapur kontekstin e thellë të fjalëve dhe për të përmirësuar kuptimin e tekstit, çka është thelbësore në detyra si klasifikimi i tekstit. BERT është treguar të ketë performancë të lartë në një gamë të gjerë të detyrave të NLP dhe është i përshtatshëm për sfidat e datasetit tonë.
+
+  - Ne nuk kemi vazhduar me ekzekutim e ketij algoritmi per shkak se ekzekutimi i modelit BERT kërkon një sasi të konsiderueshme të burimeve kompjuterike, përfshirë kohën e procesimit dhe memorien e GPU-së. Për shkak të kufizimeve në infrastrukturën tonë dhe kohës së kufizuar, ne kemi vendosur të ndalojmë trajnimin e mëtejshëm të BERT dhe të shqyrtojmë alternative më të lehta të modelimit që mund të ofrojnë një balancë më të mirë midis performancës dhe efikasitetit.
+
+
+##### 4.1 *Stochastic Gradient Descent (SGD)*
+Stochastic Gradient Descent (SGD) është një metodë optimizimi që përdoret për të gjetur vlerat e parametrave të një modeli që minimizojnë një funksion humbjeje. Ndryshe nga Gradient Descent i plotë, që llogarit gradientin mbi të gjithë setin e të dhënave, SGD përditëson parametrat duke përdorur vetëm një mostrë të rastësishme (ose një mini-batch të vogël) të dhënash në çdo iteracion. Kjo e bën atë shumë më të shpejtë dhe më të përshtatshëm për setet e mëdha të të dhënave.
+ - Ne kemi zgjedhur SGD si metodën tonë të optimizimit sepse ofron një ekuilibër të mirë mes efikasitetit të llogaritjes dhe konvergjencës. Në veçanti, për setet e mëdha të të dhënave që posedojmë, SGD mund të trajnojë modele në mënyrë të shpejtë dhe efikase pa pasur nevojë për kapacitete të mëdha kompjuterike ose kohë të gjatë procesimi që janë të nevojshme për metoda të tjera të optimizimit.
+
+  - Ne e kemi zgjedhur këtë algoritem krahasa algoritmeve tjera, për shkak se SGD ka disa avantazhe të veçanta krahasuar me metodat e tjera të optimizimit. Është i veçantë në aftësinë e tij për të përshtatur parametrat e një modeli shumë shpejt, edhe me sete të dhënash që janë shumë të mëdha për të mbajtur në memorie në të njëjtën kohë. 
 
 ## Kontributi
 Blerona Idrizi
