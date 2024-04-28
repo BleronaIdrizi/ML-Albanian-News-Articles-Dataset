@@ -154,11 +154,37 @@ Pasi që i kemi eleminuar disa kategori dhe kemi maipuluar me to, numri i kolona
 
 ![alt text](./images/category_riprocessing.png)
 
-#### Ndarja e train/test dataset-it
+##### Rikontrollimi i kategorive
+
+Sipas rezultateve të fundit ne shohim se kategoritë e përdorura me pak se 100k rreshta janë vlera të vogla përkunder vlearve të përdorura si Lajme apo Kosovë dhe kështu qe ne i kemi reduktuar ato dhe rezultati final i kategorive pas riprocesimit duket kështu:
+
+![alt text](./images/category_final_reduce.png)
+
+#### 2. *Reduktimi i të dhënave*
+Pas riprocesimit ende kemi shumë vlera në kategori dhe ekzekutimi i kodit për algoritme merr me orë të tëra, kështu qe ne kemi vendosur ti marrim vetem 1/4 e datasetit dhe ta ruajmë në fajllin: Reduced_Preprocessed_Kosovo_News_Articles_Dataset.csv
+
+![alt text](./images/dataset_reduce.png)
+
+#### 2. *Confusion Matrix*
+Para fillimit të ekzekutimit të algoritme kemi dashur ti shohim raportin e klasifikimit të datasetit tonë me Confusion Matrix. Në figurën e mëposhtme shfaqet confusion matrix e total datasetit:
+
+![alt text](./images/confusion_matrix_all.png)
+
+Pasi që kuptimi i confusion matrix është shumë më i vështirë për komplet datasetin, ne i kemi shfaqur vlerat e confusion matrix për secilën tip të kategorive. Një shembull duket kështu:
+
+![alt text](./images/confusion_matrix_example.png)
+
+Raporti i klasisfikimit para ekzekutimit të algoritmeve ka këto vlera: 
+
+![alt text](./images/confusion_matrix_report.png)
+
+#### 3. *Ndarja e train/test dataset-it*
 
 Kjo pjesë paraqet përpunimin e të dhënat tekstuale për përdorim në modele të klasifikimit të tekstit. Ne kemi kombinuar kolonat: content dhe title në një kolonë të vetme, që kodon kategoritë në forma numerike, dhe ndan të dhënat në grupe trajnimi dhe testim për të vlerësuar performancën e modelit.
 
 ![alt text](./images/trainSplitDF.png)
+
+#### 4. *Advanced Text Classification with BERT*
 
 
 
