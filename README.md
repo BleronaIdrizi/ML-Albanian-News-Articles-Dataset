@@ -184,9 +184,22 @@ Kjo pjesë paraqet përpunimin e të dhënat tekstuale për përdorim në modele
 
 ![alt text](./images/trainSplitDF.png)
 
-#### 4. *Advanced Text Classification with BERT*
+#### 4. *Algoritmet e aplikuara*
+
+Ne kemi vendosu që ti ekzekutojmë këto algoritme:
+
+##### 4.1 *BERT (Bidirectional Encoder Representations from Transformers)*
+BERT është një model i avancuar për procesimin e gjuhës natyrore (NLP) i krijuar nga Google i cili është i ndërtuar mbi arkitekturën e 'Transformers'. 
+ - Ne kemi zgjedhur të përdorim BERT për shkak të aftësisë së tij për të kapur kontekstin e thellë të fjalëve dhe për të përmirësuar kuptimin e tekstit, çka është thelbësore në detyra si klasifikimi i tekstit. BERT është treguar të ketë performancë të lartë në një gamë të gjerë të detyrave të NLP dhe është i përshtatshëm për sfidat e datasetit tonë.
+
+  - Ne nuk kemi vazhduar me ekzekutim e ketij algoritmi per shkak se ekzekutimi i modelit BERT kërkon një sasi të konsiderueshme të burimeve kompjuterike, përfshirë kohën e procesimit dhe memorien e GPU-së. Për shkak të kufizimeve në infrastrukturën tonë dhe kohës së kufizuar, ne kemi vendosur të ndalojmë trajnimin e mëtejshëm të BERT dhe të shqyrtojmë alternative më të lehta të modelimit që mund të ofrojnë një balancë më të mirë midis performancës dhe efikasitetit.
 
 
+##### 4.1 *Stochastic Gradient Descent (SGD)*
+Stochastic Gradient Descent (SGD) është një metodë optimizimi që përdoret për të gjetur vlerat e parametrave të një modeli që minimizojnë një funksion humbjeje. Ndryshe nga Gradient Descent i plotë, që llogarit gradientin mbi të gjithë setin e të dhënave, SGD përditëson parametrat duke përdorur vetëm një mostrë të rastësishme (ose një mini-batch të vogël) të dhënash në çdo iteracion. Kjo e bën atë shumë më të shpejtë dhe më të përshtatshëm për setet e mëdha të të dhënave.
+ - Ne kemi zgjedhur SGD si metodën tonë të optimizimit sepse ofron një ekuilibër të mirë mes efikasitetit të llogaritjes dhe konvergjencës. Në veçanti, për setet e mëdha të të dhënave që posedojmë, SGD mund të trajnojë modele në mënyrë të shpejtë dhe efikase pa pasur nevojë për kapacitete të mëdha kompjuterike ose kohë të gjatë procesimi që janë të nevojshme për metoda të tjera të optimizimit.
+
+  - Ne e kemi zgjedhur këtë algoritem krahasa algoritmeve tjera, për shkak se SGD ka disa avantazhe të veçanta krahasuar me metodat e tjera të optimizimit. Është i veçantë në aftësinë e tij për të përshtatur parametrat e një modeli shumë shpejt, edhe me sete të dhënash që janë shumë të mëdha për të mbajtur në memorie në të njëjtën kohë. 
 
 ## Kontributi
 Blerona Idrizi
