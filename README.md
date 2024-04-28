@@ -201,6 +201,32 @@ Stochastic Gradient Descent (SGD) është një metodë optimizimi që përdoret 
 
   - Ne e kemi zgjedhur këtë algoritem krahasa algoritmeve tjera, për shkak se SGD ka disa avantazhe të veçanta krahasuar me metodat e tjera të optimizimit. Është i veçantë në aftësinë e tij për të përshtatur parametrat e një modeli shumë shpejt, edhe me sete të dhënash që janë shumë të mëdha për të mbajtur në memorie në të njëjtën kohë. 
 
+##### 4.3 *Logistic Regression (tf-idf)*
+Logistic Regression është një algoritem i mësimit supervizuar që përdoret për klasifikimin e të dhënave binare ose multiklasë. Në këtë rast, ai është përdorur për të klasifikuar artikujt e lajmeve në kategori të ndryshme.
+ - Arsyeja për zgjedhjen: Logistic Regression është zgjedhur për shkak të aftësisë së tij të lartë për të punuar me datasete të mëdha, aftësisë për të klasifikuar me saktësi, dhe për shkak të interpretueshmërisë së rezultateve të tij. Përveç kësaj, përdorimi i teknikës tf-idf për të përfaqësuar tekstet ka përfitime të mëdha, pasi i jep peshësi të ndryshme fjalëve bazuar në rëndësinë e tyre për dokumentin në të cilin ndodhen.
+
+
+##### 4.4 *Naive Bayes (tf-idf)*
+Naive Bayes është një familje e algoritmeve të mësimit të makinës bazuar në aplikimin e teoremës së Bayesit me një supozim të thjeshtë: të gjitha tiparet janë të pavarura njëra-tjetrës. Në këtë projekt, ka përdorur versionin MultinomialNB për shkak të natyrës së tf-idf.
+ - Naive Bayes është zgjedhur për shkak të shpejtësisë së tij dhe aftësisë për të punuar me datasete të mëdha. Për më tepër, pavarësisht nga supozimi i tij i thjeshtë, Naive Bayes tregon shpesh performancë të mirë në klasifikimin e tekstit dhe në veçanti është efektiv në klasifikimin e dokumenteve të mëdha të tekstit siç është ky dataset.
+
+
+##### 4.5 *Logistic Regression (Word2Vec)*
+Word2Vec është një teknikë për të përfaqësuar fjalët në forma vektoriale duke ruajtur lidhjet e tyre semantike. Logistic Regression është pastaj përdorur për të klasifikuar artikujt e lajmeve duke përdorur këto vektore si input.
+ - Word2Vec është zgjedhur për të përfaqësuar tekstet në vektore për shkak të aftësisë së tij për të kapur lidhjet semantike midis fjalëve. Kjo mundëson marrjen e përfitimeve nga informacioni semantik i tekstit, duke përmirësuar performancën e algoritmit të klasifikimit. Përveç kësaj, Logistic Regression është zgjedhur për shkak të thjeshtësisë së tij dhe aftësisë për të punuar me inpute numerike.
+
+
+##### 4.6 *Support Vector Machines (SVM)*
+Support Vector Machines është një algoritem i mësimit të makinës që përdoret për klasifikim, regresion dhe deteksion e jashtëzakonshme. SVM kërkon të gjejmë një hiperplan të ndarjes maksimale midis dy klasave në hapësirën e shkallëve të shumëdimensioneve.
+ - SVM është zgjedhur për shkak të aftësisë së tij për të krijuar kufij të qarta të ndarjes midis kategorive në hapësirën e shkallëve të larta. Kjo është e dobishme për klasifikimin e artikujve të lajmeve, pasi ka shumë fjalë dhe koncepte që duhet të ndahen në mënyrë të qartë. Përveç kësaj, SVM është i aftë të trajtojë datasete të mëdha si ai që ju keni përdorur në projektin tuaj.
+
+  - Mungesa e rezultateve të SVM shkaktohet nga koha e zgjatur e ekzekutimit. Algoritmi SVM mund të jetë mjaft i ngadalshëm kur punon me datasete të mëdha dhe kur ka shumë dimensione. Në disa raste, nevojitet shumë kohë për të përfituar një model të përshtatshëm dhe të testohet për performancë. Për shkak të kufizimeve në infrastrukturën tonë dhe kohës së kufizuar, ne kemi vendosur të ndalojmë trajnimin e mëtejshëm të SVM dhe të shqyrtojmë alternative më të lehta të modelimit që mund të ofrojnë një balancë më të mirë midis performancës dhe efikasitetit.
+
+
+
+Zgjedhja e këtyre algoritmeve është bërë duke marrë parasysh karakteristikat e datasetit, objektivat e projektit dhe aftësitë e secilit algoritem për të përballuar nevojat e përcaktuara. Përdorimi i kombinimit të algoritmeve të ndryshme siguron një performancë më të mirë dhe më të përshtatshme për projektin tënd.
+
+
 ##### 5. *Përmbledhje e rezultateve nga algoritmet e përdorura*
 Në tabelën e mëposhtme kemi paraqitur tabelën me resultatet e algoritmeve të përdourar me ndarjen e datasetit të split&test 8/2:
 
@@ -208,6 +234,10 @@ Në tabelën e mëposhtme kemi paraqitur tabelën me resultatet e algoritmeve t�
 |---------------|----------|-----------|--------|----------|
 | BERT          | ?        | ?         | ?      | ?        |
 | SGD           | 0.81     | 0.84      | 0.81   | 0.74     |
+| LG(tf-idf)    | 0.94     | 0.93      | 0.94   | 0.93     |
+| NB(tf-idf)    | 0.83     | 0.85      | 0.83   | 0.76     |
+| LG(Word2Vec)  | 0.84     | 0.81      | 0.84   | 0.79     |
+| SVM           | ?        | ?         | ?      | ?        |
 
 Një shembull tjetër që kemi përdorur është krahasimi i algoritmit SGD me mostër të trajnimit dhe testimi të ndryshme. Në tabelën në vijim janë shfaqur rezultatet e fituara:
 
