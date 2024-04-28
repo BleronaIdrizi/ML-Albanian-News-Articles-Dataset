@@ -195,11 +195,29 @@ BERT është një model i avancuar për procesimin e gjuhës natyrore (NLP) i kr
   - Ne nuk kemi vazhduar me ekzekutim e ketij algoritmi per shkak se ekzekutimi i modelit BERT kërkon një sasi të konsiderueshme të burimeve kompjuterike, përfshirë kohën e procesimit dhe memorien e GPU-së. Për shkak të kufizimeve në infrastrukturën tonë dhe kohës së kufizuar, ne kemi vendosur të ndalojmë trajnimin e mëtejshëm të BERT dhe të shqyrtojmë alternative më të lehta të modelimit që mund të ofrojnë një balancë më të mirë midis performancës dhe efikasitetit.
 
 
-##### 4.1 *Stochastic Gradient Descent (SGD)*
+##### 4.2 *Stochastic Gradient Descent (SGD)*
 Stochastic Gradient Descent (SGD) është një metodë optimizimi që përdoret për të gjetur vlerat e parametrave të një modeli që minimizojnë një funksion humbjeje. Ndryshe nga Gradient Descent i plotë, që llogarit gradientin mbi të gjithë setin e të dhënave, SGD përditëson parametrat duke përdorur vetëm një mostrë të rastësishme (ose një mini-batch të vogël) të dhënash në çdo iteracion. Kjo e bën atë shumë më të shpejtë dhe më të përshtatshëm për setet e mëdha të të dhënave.
  - Ne kemi zgjedhur SGD si metodën tonë të optimizimit sepse ofron një ekuilibër të mirë mes efikasitetit të llogaritjes dhe konvergjencës. Në veçanti, për setet e mëdha të të dhënave që posedojmë, SGD mund të trajnojë modele në mënyrë të shpejtë dhe efikase pa pasur nevojë për kapacitete të mëdha kompjuterike ose kohë të gjatë procesimi që janë të nevojshme për metoda të tjera të optimizimit.
 
   - Ne e kemi zgjedhur këtë algoritem krahasa algoritmeve tjera, për shkak se SGD ka disa avantazhe të veçanta krahasuar me metodat e tjera të optimizimit. Është i veçantë në aftësinë e tij për të përshtatur parametrat e një modeli shumë shpejt, edhe me sete të dhënash që janë shumë të mëdha për të mbajtur në memorie në të njëjtën kohë. 
+
+##### 5. *Përmbledhje e rezultateve nga algoritmet e përdorura*
+Në tabelën e mëposhtme kemi paraqitur tabelën me resultatet e algoritmeve të përdourar me ndarjen e datasetit të split&test 8/2:
+
+| Modeli        | Accuracy | Precision | Recall | F1-Score |
+|---------------|----------|-----------|--------|----------|
+| BERT          | ?        | ?         | ?      | ?        |
+| SGD           | 0.81     | 0.84      | 0.81   | 0.74     |
+
+Një shembull tjetër që kemi përdorur është krahasimi i algoritmit SGD me mostër të trajnimit dhe testimi të ndryshme. Në tabelën në vijim janë shfaqur rezultatet e fituara:
+
+| Modeli        | Train/Test    | Accuracy | Precision | Recall | F1-Score |
+|---------------|---------------|----------|-----------|--------|----------|
+| SGD           | 0.9/0.1       | 0.81     | 0.84      | 0.81   | 0.74     |
+| SGD           | 0.8/0.2       | 0.81     | 0.84      | 0.81   | 0.74     |
+| SGD           | 0.7/0.3       | 0.81     | 0.84      | 0.81   | 0.74     |
+
+Sipas rezultateve të tabelës së mësiperme shohim se performanca e algoritmit në tri raste të ndryshme është e njejtë.
 
 ## Kontributi
 Blerona Idrizi
