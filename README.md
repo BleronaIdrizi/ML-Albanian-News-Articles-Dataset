@@ -299,7 +299,8 @@ Në tabelën e mëposhtme kemi paraqitur tabelën me resultatet e algoritmeve t�
 | Modeli        | Accuracy | Precision | Recall | F1-Score |
 |---------------|----------|-----------|--------|----------|
 | BERT          | ?        | ?         | ?      | ?        |
-| SGD           | 0.86     | 0.86      | 0.86   | 0.86     |
+| CM            | 0.86     | 0.86      | 0.86   | 0.86     |
+| SGD           | 0.92     | 0.92      | 0.92   | 0.92     |
 | LG(tf-idf)    | 0.94     | 0.93      | 0.94   | 0.93     |
 | NB(tf-idf)    | 0.83     | 0.85      | 0.83   | 0.76     |
 | LG(Word2Vec)  | 0.84     | 0.81      | 0.84   | 0.79     |
