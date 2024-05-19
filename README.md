@@ -26,7 +26,9 @@ Karakteristikat kryesore të datasetit përfshijnë:
 Ju lutemi referojuni dokumentacionit të datasetit në Kaggle për detaje të mëtejshme dhe udhëzime rreth përdorimit të tij.
 
 ## Struktura e projektit
-- `data-preparation-and-visualization/main.ipynb`: Skriptë e python që paraqet fazën e parë të detyrës - .
+- `Faza_1_përgatitja-e-modelit/main.ipynb`: Skriptë e python që paraqet ekzekutimet e fazës së parë të detyrës.
+- `Faza_2_trajnimi-i-modelit/main.ipynb`: Skriptë e python që paraqet ekzekutimet e fazës së dytë të detyrës.
+- `Faza_3_ritrajnimi-i-modelit/main.ipynb`: Skriptë e python që paraqet ekzekutimet e fazës së tretë të detyrës.
 - `files/`: Direktoria ku ruhen fajllat e dataseteve të përdorura në projekt.
 - `images/`: Direktoria ku ruhen imazhet e përdorura në projekt.
 - `requirements.txt`: Direktoria ku ruhen libraritë e përdorura.
@@ -246,6 +248,70 @@ Një shembull tjetër që kemi përdorur është krahasimi i algoritmit SGD me m
 | SGD           | 0.9/0.1       | 0.81     | 0.84      | 0.81   | 0.74     |
 | SGD           | 0.8/0.2       | 0.81     | 0.84      | 0.81   | 0.74     |
 | SGD           | 0.7/0.3       | 0.81     | 0.84      | 0.81   | 0.74     |
+
+Sipas rezultateve të tabelës së mësiperme shohim se performanca e algoritmit në tri raste të ndryshme është e njejtë.
+
+## Faza III: Ritrajnimi i modelit
+
+#### 1. *Rasti 1*
+##### *Riprocesimi i dataset-it*
+
+ - Kontrollimi i të dhënave
+
+Së pari i kemi shikur edhe njëherë kategoritë si janë përdorur në dataset-in tonë.
+
+![alt text](./images/f3_example1.png)
+
+- Largimi i kolonës "Lajme"
+Pasi që pjesa më e madhe e datasetit përbëhet nga kategoria Lajme, ne kemi vendosur me i hequr ato për të matur mesatarën e datasetit pa kategorinë Lajme. Në figurën e mëposhtme kemi paraqitur sa rows janë larguar dhe si duken kategoritë pas largimit.
+
+![alt text](./images/f3_example2.png)
+
+- Largimi i kolonës "Kosovë"
+
+Siq shihet në figurën e mësiperme kategoria "Kosovë" është pjesë e Lajmeve që përmban shumicën e rrshtave të datasetit, kemi vendosur ta heqim atë. Në figurën e mëposhtme kemi paraqitur sa rows janë larguar dhe si duken kategoritë pas largimit të kategorisë.
+
+![alt text](./images/f3_example3.png)
+
+- Largimi i rreshtave, si outliers
+
+Pas analizimit të kategorive të mbetura me vlerat e tyre kemi hequr kategoritë sipas një kufiri, që i kemi konsideruar si outliers. Në figurën e mëposhtme janë paraqitur kategoritë e mbetura.
+
+![alt text](./images/f3_example4.png)
+
+- Zevendësimi i kategorive
+Një një rresht kemi pasur një tekst me dy lloje të kategorisë dhe i kemi zevendësuar ato.
+
+![alt text](./images/f3_example5.png)
+
+##### *Confusion Matrix*
+Pasi që kuptimi i confusion matrix është shumë më i vështirë për komplet datasetin, ne i kemi shfaqur vlerat e confusion matrix për secilën tip të kategorive. Një shembull duket kështu:
+
+![alt text](./images/f3_example6.png)
+
+Raporti i klasisfikimit para ekzekutimit të algoritmeve ka këto vlera: 
+
+![alt text](./images/f3_example7.png)
+
+##### *Përmbledhje e rezultateve nga algoritmet e përdorura*
+Në tabelën e mëposhtme kemi paraqitur tabelën me resultatet e algoritmeve të përdourar me ndarjen e datasetit të split&test 8/2:
+
+| Modeli        | Accuracy | Precision | Recall | F1-Score |
+|---------------|----------|-----------|--------|----------|
+| BERT          | ?        | ?         | ?      | ?        |
+| SGD           | 0.86     | 0.86      | 0.86   | 0.86     |
+| LG(tf-idf)    | 0.94     | 0.93      | 0.94   | 0.93     |
+| NB(tf-idf)    | 0.83     | 0.85      | 0.83   | 0.76     |
+| LG(Word2Vec)  | 0.84     | 0.81      | 0.84   | 0.79     |
+| SVM           | ?        | ?         | ?      | ?        |
+
+Një shembull tjetër që kemi përdorur është krahasimi i algoritmit SGD me mostër të trajnimit dhe testimi të ndryshme. Në tabelën në vijim janë shfaqur rezultatet e fituara:
+
+| Modeli        | Train/Test    | Accuracy | Precision | Recall | F1-Score |
+|---------------|---------------|----------|-----------|--------|----------|
+| SGD           | 0.9/0.1       | 0.92     | 0.92      | 0.92   | 0.92     |
+| SGD           | 0.8/0.2       | 0.92     | 0.92      | 0.92   | 0.92     |
+| SGD           | 0.7/0.3       | 0.92     | 0.92      | 0.92   | 0.92     |
 
 Sipas rezultateve të tabelës së mësiperme shohim se performanca e algoritmit në tri raste të ndryshme është e njejtë.
 
