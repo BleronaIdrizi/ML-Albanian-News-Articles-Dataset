@@ -263,7 +263,7 @@ Së pari i kemi shikur edhe njëherë kategoritë si janë përdorur në dataset
 ![alt text](./images/f3_example1.png)
 
 - Largimi i kolonës "Lajme"
-Pasi që pjesa më e madhe e datasetit përbëhet nga kategoria Lajme, ne kemi vendosur me i hequr ato për të matur mesatarën e datasetit pa kategorinë Lajme. Në figurën e mëposhtme kemi paraqitur sa rows janë larguar dhe si duken kategoritë pas largimit.
+Pasi që pjesa më e madhe e datasetit përbëhet nga kategoria Lajme, ne kemi vendosur ti largojmë ato për të matur mesatarën e datasetit pa kategorinë Lajme. Në figurën e mëposhtme kemi paraqitur sa rows janë larguar dhe si duken kategoritë pas largimit.
 
 ![alt text](./images/f3_example2.png)
 
@@ -302,8 +302,8 @@ Në tabelën e mëposhtme kemi paraqitur tabelën me resultatet e algoritmeve t�
 | CM            | 0.86     | 0.86      | 0.86   | 0.86     |
 | SGD           | 0.92     | 0.92      | 0.92   | 0.92     |
 | LG(tf-idf)    | 0.94     | 0.93      | 0.94   | 0.93     |
-| NB(tf-idf)    | 0.83     | 0.85      | 0.83   | 0.76     |
-| LG(Word2Vec)  | 0.84     | 0.81      | 0.84   | 0.79     |
+| NB(tf-idf)    | 1        | 1         | 1      | 1        |
+| LG(Word2Vec)  | 1        | 1         | 1      | 1        |
 | SVM           | ?        | ?         | ?      | ?        |
 
 Një shembull tjetër që kemi përdorur është krahasimi i algoritmit SGD me mostër të trajnimit dhe testimi të ndryshme. Në tabelën në vijim janë shfaqur rezultatet e fituara:
@@ -315,6 +315,46 @@ Një shembull tjetër që kemi përdorur është krahasimi i algoritmit SGD me m
 | SGD           | 0.7/0.3       | 0.92     | 0.92      | 0.92   | 0.92     |
 
 Sipas rezultateve të tabelës së mësiperme shohim se performanca e algoritmit në tri raste të ndryshme është e njejtë.
+
+#### 1. *Rasti 2*
+##### *Riprocesimi i dataset-it duke ndarë kategoritë në Lajme dhe JoLajme*
+
+- Zëvendësimi i vlerës `JoLajme` për cdo kategori të ndryshme nga vlera `Lajme`
+Pasi që pjesa më e madhe e datasetit përbëhet nga kategoria Lajme, ne kemi vendosur ti ndajmë artikujt në dy kategori kryesore, Lajme dhe JoLajme. Në figurën e mëposhtme kemi paraqitur  dy kategoritë dhe numrin e artikujve të cilët numërojnë ato.
+
+![alt text](./images/lajme_joLajme.png)
+
+
+##### *Përmbledhje e rezultateve nga algoritmet e përdorura*
+Në tabelën e mëposhtme kemi paraqitur tabelën me resultatet e algoritmeve të përdourar me ndarjen e datasetit të split&test 8/2:
+
+| Modeli        | Accuracy | Precision | Recall | F1-Score |
+|---------------|----------|-----------|--------|----------|
+| BERT          | ?        | ?         | ?      | ?        |
+| SGD           | 0.92     | 0.92      | 0.92   | 0.92     |
+| LG(tf-idf)    | 1        | 1         | 1      | 1        |
+| NB(tf-idf)    | 1        | 1         | 1      | 1        |
+| LG(Word2Vec)  | 0.23     | 0.31      | 0.23   | 0.19     |
+| SVM           | ?        | ?         | ?      | ?        |
+
+Një shembull tjetër që kemi përdorur është krahasimi i algoritmit SGD me mostër të trajnimit dhe testimi të ndryshme. Në tabelën në vijim janë shfaqur rezultatet e fituara:
+
+| Modeli        | Train/Test    | Accuracy | Precision | Recall | F1-Score |
+|---------------|---------------|----------|-----------|--------|----------|
+| SGD           | 0.9/0.1       | 0.85     | 0.87      | 0.85   | 0.83     |
+| SGD           | 0.8/0.2       | 1        | 1         | 1      | 1        |
+| SGD           | 0.7/0.3       | 1        | 1         | 1      | 1        |
+
+Sipas rezultateve të tabelës së mësiperme shohim se performanca e algoritmit në dy rastet e fundit është e njejtë, pra për taining set më të vogel se 90% ka nje saktësi prej 100%.
+
+
+
+Bazuar në rezultatet e prezantuara, disa vlerësime mund të bëhen:
+
+- Preprocesimi: Për rastin e dytë, ndarja e datasetit vetëm në dy kategori, "Lajme" dhe "JoLajme", ka sjellë një performancë shumë të mirë me disa prej algoritmeve, siç është përfunduar nga performanca perfekte e Naive Bayes dhe Logistic Regression me tf-idf. Kjo ndarje e thjeshtë mund të jetë e preferueshme nëse kategoritë e tjera janë të ndërlikuara dhe nuk ofrojnë përparësi të qarta.
+
+- Algoritmi: Në të dy rastet, algoritmet si Naive Bayes dhe Logistic Regression me tf-idf kanë treguar performancë shumë të mirë. Algoritmi SGD ka qenë konsistent në të dy rastet.
+
 
 ## Kontributi
 Blerona Idrizi
