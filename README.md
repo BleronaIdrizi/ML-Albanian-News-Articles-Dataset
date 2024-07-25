@@ -27,6 +27,7 @@ Karakteristikat kryesore të datasetit përfshijnë:
 Ju lutemi referojuni dokumentacionit të datasetit në Kaggle për detaje të mëtejshme dhe udhëzime rreth përdorimit të tij.
 
 ## Struktura e projektit
+Ky projekt është zhvilluar në disa faza të cilat janë të ndara si më poshtë:
 - `Faza_1_përgatitja-e-modelit/main.ipynb`: Skriptë e python që paraqet ekzekutimet e fazës së parë të detyrës.
 - `Faza_2_trajnimi-i-modelit/main.ipynb`: Skriptë e python që paraqet ekzekutimet e fazës së dytë të detyrës.
 - `Faza_3_ritrajnimi-i-modelit/main.ipynb`: Skriptë e python që paraqet ekzekutimet e fazës së tretë të detyrës.
@@ -36,8 +37,8 @@ Ju lutemi referojuni dokumentacionit të datasetit në Kaggle për detaje të m�
 - `README.md`: Ky dokument, i cili përmban informacionet bazë të projektit.
 
 ## Teknologjitë e përdorura
-Gjuha kryesore e programimit për zhvillimin e modelit është python ku libraritë e përdorura gjenden ne fajllin requirements.txt në mënyrë që me atë fajll mund të instalohen libraritë e nevojshme për këtë projekt.
-Disa nga algoritmet e klasifikimit qe pretendojm ti perdorim që të gjejmë se cili na pershtatet dhe na rezulton me rezultate me të mira janë:
+Gjuha kryesore e programimit për zhvillimin e k;tij modeli është Python, derisa libraritë e përdorura mund të gjenden ne fajllin requirements.txt në mënyrë që me atë fajll të mund të instalohen libraritë e nevojshme për këtë projekt.
+Algoritmet e klasifikimit që janë përdorur janë:
 ```python
 1. Logistic Regression
 2. Decision Tree
