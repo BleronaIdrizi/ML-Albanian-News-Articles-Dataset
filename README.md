@@ -28,12 +28,12 @@ Ju lutemi referojuni dokumentacionit të datasetit në Kaggle për detaje të m�
 
 ## Struktura e projektit
 Ky projekt është zhvilluar në disa faza të cilat janë të ndara si më poshtë:
-- `Faza_1_përgatitja-e-modelit/main.ipynb`: Skriptë e python që paraqet ekzekutimet e fazës së parë të detyrës.
-- `Faza_2_trajnimi-i-modelit/main.ipynb`: Skriptë e python që paraqet ekzekutimet e fazës së dytë të detyrës.
-- `Faza_3_ritrajnimi-i-modelit/main.ipynb`: Skriptë e python që paraqet ekzekutimet e fazës së tretë të detyrës.
-- `files/`: Direktoria ku ruhen fajllat e dataseteve të përdorura në projekt.
-- `images/`: Direktoria ku ruhen imazhet e përdorura në projekt.
-- `requirements.txt`: Direktoria ku ruhen libraritë e përdorura.
+- `Faza_1_përgatitja-e-modelit/main.ipynb`: Skriptë e python që paraqet ekzekutimet e fazës së parë të detyrës;
+- `Faza_2_trajnimi-i-modelit/main.ipynb`: Skriptë e python që paraqet ekzekutimet e fazës së dytë të detyrës;
+- `Faza_3_ritrajnimi-i-modelit/main.ipynb`: Skriptë e python që paraqet ekzekutimet e fazës së tretë të detyrës;
+- `files/`: Direktoria ku ruhen fajllat e dataseteve të përdorura në projekt;
+- `images/`: Direktoria ku ruhen imazhet e përdorura në projekt;
+- `requirements.txt`: Direktoria ku ruhen libraritë e përdorura;
 - `README.md`: Ky dokument, i cili përmban informacionet bazë të projektit.
 
 ## Teknologjitë e përdorura
@@ -48,9 +48,10 @@ Algoritmet e klasifikimit që janë përdorur janë:
 ```
 
 ## Startimi i projektit
-1. Se pari bëni instalimin e python-it në pajisjen e juaj.
-2. Klonimi i projektit:  **[Albanian News Articles Dataset](https://www.kaggle.com/datasets/gentrexha/kosovo-news-articles-dataset)**.
-3. Ekzekutimi i komandës për instalimin e librarive në direktoriumin ku është i vendosur projekti:
+Në mënyrë që projekti të jetë funksional dhe të mund të ekzekutoni në pajisjet tuaja fundore duhet të kaloni në këta hapa:
+1. Duhet të keni të instaluar gjuhën programuese python në pajisjen e juaj, nëse paraprakisht nuk e keni;
+2. Klononi projektin nga kjo vegzë:  **[Albanian News Articles Dataset](https://www.kaggle.com/datasets/gentrexha/kosovo-news-articles-dataset)**, dhe;
+3. Ekzekutoni komandat për instalimin e librarive në direktoriumin ku është i vendosur projekti:
 ```python
 pip3 install -r requirements.txt
 ```
